@@ -6,7 +6,7 @@
   <link href="https://kento85.github.io/atom.xml" rel="self"/>
   
   <link href="https://kento85.github.io/"/>
-  <updated>2021-10-21T16:42:12.474Z</updated>
+  <updated>2021-10-23T05:18:25.858Z</updated>
   <id>https://kento85.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>程序的控制结构</title>
+    <link href="https://kento85.github.io/2021/10/23/%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%8E%A7%E5%88%B6%E7%BB%93%E6%9E%84/"/>
+    <id>https://kento85.github.io/2021/10/23/%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%8E%A7%E5%88%B6%E7%BB%93%E6%9E%84/</id>
+    <published>2021-10-23T03:47:55.000Z</published>
+    <updated>2021-10-23T05:18:25.858Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="选择结构"><a href="#选择结构" class="headerlink" title="选择结构"></a>选择结构</h1><ul><li><em><strong>if语句</strong></em></li></ul><ol><li><em>if结构</em></li></ol><p>​        <strong>语法格式：if(表达式)  语句</strong> </p><p>​         注：在if语句中常用的比较两个数是否相等的表达式如“a==b”,这是关系表达式而不是赋值表达式”a=b“。</p><p>​    2. if-else结构</p><p>​         <strong>语法格式：if（表达式）语句1</strong></p><p>​                             <strong>else 语句二</strong></p><p>​      3.if-else嵌套结构</p><p>​          <strong>语法格式：if（表达式1）</strong></p><p>​                                     <strong>if（表达式2） 语句1</strong></p><p>​                                     <strong>else  语句2</strong></p><p>​                              <strong>else</strong></p><p>​                                     <strong>if（表达式3）语句3</strong></p><p>​                                     <strong>else 语句4</strong></p><p>​       例:</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">`y=<span class="number">-1</span>`</span><br><span class="line">`<span class="keyword">if</span>(x!=<span class="number">0</span>)`</span><br><span class="line">` &#123; <span class="keyword">if</span>(x&gt;<span class="number">0</span>)  y=<span class="number">1</span>; &#125;  `</span><br><span class="line">`<span class="keyword">else</span>`</span><br><span class="line">      `y=<span class="number">0</span>;`</span><br><span class="line">`<span class="built_in">printf</span>(<span class="string">&quot;y=%d\n&quot;</span>,y);`          </span><br></pre></td></tr></table></figure><p>​     理解：当x=-1上面程序段运行时，输出结果为y=-1，因为花括号”{ }”括起来的内容成为第一个if语句的复合语句，else与第一个if配对，而x=-1进入第一个if语句后不符合复合语句要求此时y的值仍然为-1，但由于x=-1符合第一个if语句则不会进入else语句，故y=-1。</p><p>此外，使用if-else结构的多层嵌套来实现多分支选择时，往往写成如下规范模式：</p><p>语法格式：<strong>if(表达式1)  语句 1</strong></p><p>​                   <strong>else if(表达式2) 语句 2</strong></p><p>​                    <strong>……</strong></p><p>​                   <strong>else if(表达式k) 语句 k</strong></p><p>​                    <strong>……</strong></p><p>​                   <strong>else if(表达式k) 语句 n</strong></p><p>​                    <strong>[else 语句 n+1]</strong></p><ul><li><p><strong>switch语句</strong></p><p>语法格式：switch ( 整型表达式 ){</p><pre><code>                  case 整型常量表达式 1：语句组：break;                  case 整型常量表达式 2 : 语句组：break;                  case 整型常量表达式 3 : 语句组：break;                  ……                  case 整型常量表达式 n :语句组：break;</code></pre><p>​                      [default:语句组 n+1]     </p><p>​                 }</p></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;选择结构&quot;&gt;&lt;a href=&quot;#选择结构&quot; class=&quot;headerlink&quot; title=&quot;选择结构&quot;&gt;&lt;/a&gt;选择结构&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;if语句&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;em&gt;i</summary>
+      
+    
+    
+    
+    
+    <category term="博客" scheme="https://kento85.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+    <category term="C语言" scheme="https://kento85.github.io/tags/C%E8%AF%AD%E8%A8%80/"/>
+    
+  </entry>
   
   <entry>
     <title>Java 语言基础</title>
