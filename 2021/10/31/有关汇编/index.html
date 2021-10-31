@@ -14,7 +14,7 @@
 <meta property="og:description" content="CPU对存储器的读写​       存储器被划分为多个存储单元，存储单元从零开始顺序编号，这些编号可以看作存储单元在存储器中的地址。就像一条街，每个房子都有门牌号码。 ​        CPU要从内存中读取数据，首先要指定存储单元的地址，也就是说它要先确定它要读取哪一个存储单元中的数据。就像在一条街上找人，先要确定他住在哪个房子里。 ​        可见，CPU要想进行数据的读写，必须和外部器件">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-10-31T10:16:49.000Z">
-<meta property="article:modified_time" content="2021-10-31T11:06:43.372Z">
+<meta property="article:modified_time" content="2021-10-31T11:10:37.720Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -98,9 +98,9 @@
         <h2 id="CPU对存储器的读写"><a href="#CPU对存储器的读写" class="headerlink" title="CPU对存储器的读写"></a>CPU对存储器的读写</h2><p>​       存储器被划分为多个存储单元，存储单元从零开始顺序编号，<u>这些编号可以看作存储单元在存储器中的地址</u>。就像一条街，每个房子都有门牌号码。</p>
 <p>​        CPU要从内存中读取数据，首先要指定存储单元的地址，也就是说它要先确定它要读取哪一个存储单元中的数据。就像在一条街上找人，先要确定他住在哪个房子里。</p>
 <p>​        可见，CPU要想进行数据的读写，必须和外部器件（标准说法是芯片）进行下面3类信息的交互：</p>
-<pre><code>     * **存储单元的地址(地址信息)；**
-     * **器件的选择，读或写的命令(控制信息)；**
-     * **读或写的数据(数据信息)。**
+<pre><code>     存储单元的地址(地址信息)；
+     器件的选择，读或写的命令(控制信息)；
+     读或写的数据(数据信息)。
 </code></pre>
 <h2 id="总线"><a href="#总线" class="headerlink" title="总线"></a>总线</h2><p>​       那么CPU是通过什么将地址、数据和控制信息传到存储器芯片中的呢？电子计算机能处理、传输的信息都是电信号，电信号当然要用导线传送。在计算机中专门有连接CPU和其他芯片的导线，通常称为<strong>总线</strong>。根据传送信息的不同，总线从逻辑上又分为3类，地址总线、控制总线和数据总线。</p>
 <h4 id="地址总线"><a href="#地址总线" class="headerlink" title="地址总线"></a>地址总线</h4><p>​       现在我们知道，CPU是通过地址总线来指定存储器单元的。可见地址总线上能传送多少个不同的信息，CPU就可以对多少个存储单元进行寻址。</p>
