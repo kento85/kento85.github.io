@@ -4,19 +4,18 @@
   <meta charset="utf-8">
   
   
-  <title>“如何发布一篇博客” | Hexo</title>
+  <title>寄存器 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="第一步：右键点击D目录下Blog，再点击Git Bush Here，执行“hexo n “博客标题””,点击D:\Blog\source_posts则会发现文件已生成； 第二步：点击文件用Markdown编辑器编辑博客内容； 第三步：打开Git Bush Here输入”hexo generate“命令产生静态文件； 第四步：输入”hexo server“，然后到http：&#x2F;&#x2F;localhost:4">
+  <meta name="description" content="前言：内部总线实现CPU内部各器件之间的联系，外部总线实现CPU和主板上其他器件的联系。简单地说，在CPU中：  运算器进行信息处理  寄存器进行信息存储  控制器控制各种器件进行工作  内部总线连接各种器件，在它们之间进行数据的传送 通用寄存器（不同的CPU，寄存器的个数、结构是不同的，8086CPU有14个寄存器，每个寄存器都有一个名称，这些寄存器是：AX、BX、CX、DX、SI、DI、SP、">
 <meta property="og:type" content="article">
-<meta property="og:title" content="“如何发布一篇博客”">
-<meta property="og:url" content="https://kento85.github.io/2021/10/13/%E2%80%9C%E5%A6%82%E4%BD%95%E5%8F%91%E5%B8%83%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E2%80%9D/index.html">
+<meta property="og:title" content="寄存器">
+<meta property="og:url" content="https://kento85.github.io/2021/11/08/%E5%AF%84%E5%AD%98%E5%99%A8/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="第一步：右键点击D目录下Blog，再点击Git Bush Here，执行“hexo n “博客标题””,点击D:\Blog\source_posts则会发现文件已生成； 第二步：点击文件用Markdown编辑器编辑博客内容； 第三步：打开Git Bush Here输入”hexo generate“命令产生静态文件； 第四步：输入”hexo server“，然后到http：&#x2F;&#x2F;localhost:4">
+<meta property="og:description" content="前言：内部总线实现CPU内部各器件之间的联系，外部总线实现CPU和主板上其他器件的联系。简单地说，在CPU中：  运算器进行信息处理  寄存器进行信息存储  控制器控制各种器件进行工作  内部总线连接各种器件，在它们之间进行数据的传送 通用寄存器（不同的CPU，寄存器的个数、结构是不同的，8086CPU有14个寄存器，每个寄存器都有一个名称，这些寄存器是：AX、BX、CX、DX、SI、DI、SP、">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-10-13T13:30:42.000Z">
-<meta property="article:modified_time" content="2021-10-13T14:00:42.694Z">
+<meta property="article:published_time" content="2021-11-08T14:11:23.000Z">
+<meta property="article:modified_time" content="2021-11-08T15:10:19.964Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="学习">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -74,10 +73,10 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-“如何发布一篇博客”" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-寄存器" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2021/10/13/%E2%80%9C%E5%A6%82%E4%BD%95%E5%8F%91%E5%B8%83%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E2%80%9D/" class="article-date">
-  <time class="dt-published" datetime="2021-10-13T13:30:42.000Z" itemprop="datePublished">2021-10-13</time>
+    <a href="/2021/11/08/%E5%AF%84%E5%AD%98%E5%99%A8/" class="article-date">
+  <time class="dt-published" datetime="2021-11-08T14:11:23.000Z" itemprop="datePublished">2021-11-08</time>
 </a>
     
   </div>
@@ -88,7 +87,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      “如何发布一篇博客”
+      寄存器
     </h1>
   
 
@@ -96,40 +95,54 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>第一步：右键点击D目录下Blog，再点击Git Bush Here，执行“hexo n “博客标题””,点击D:\Blog\source_posts则会发现文件已生成；</p>
-<p>第二步：点击文件用Markdown编辑器编辑博客内容；</p>
-<p>第三步：打开Git Bush Here输入”hexo generate“命令产生静态文件；</p>
-<p>第四步：输入”hexo server“，然后到http：//localhost:4000预览网站效果.</p>
-<p>注：当博客网站打不开时，可右键点击Blog的Git Bush Here输入“hexo g &amp;&amp; hexo s”.</p>
+        <p>前言：内部总线实现CPU内部各器件之间的联系，外部总线实现CPU和主板上其他器件的联系。简单地说，在CPU中：</p>
+<ul>
+<li><p>运算器进行信息处理</p>
+</li>
+<li><p>寄存器进行信息存储</p>
+</li>
+<li><p>控制器控制各种器件进行工作</p>
+</li>
+<li><p>内部总线连接各种器件，在它们之间进行数据的传送</p>
+<h2 id="通用寄存器"><a href="#通用寄存器" class="headerlink" title="通用寄存器"></a>通用寄存器</h2><p>（不同的CPU，寄存器的个数、结构是不同的，8086CPU有14个寄存器，每个寄存器都有一个名称，这些寄存器是：AX、BX、CX、DX、SI、DI、SP、BP、IP、CS、SS、DS、ES、PSW。）</p>
+<p>  <strong>AX、BX、CX、DX这四个寄存器通常用来存放一般性的数据，被称为通用寄存器，这四个寄存器都可分为两个可独立使用的8位寄存器来用：</strong></p>
+<p><strong>AX可分为AH和AL;</strong></p>
+<p><strong>BX可分为BH和BL</strong>;</p>
+<p><strong>CX可分为CH和CL;</strong></p>
+<p><strong>DX可分为DH和DL;</strong></p>
+<p>AX的低8位(0位<del>7位)构成了AL寄存器，高8位(8位</del>15位)构成了AH寄存器。AH和AL寄存器是可以独立使用的8位寄存器。</p>
+<h2 id="字在寄存器中的存储"><a href="#字在寄存器中的存储" class="headerlink" title="字在寄存器中的存储"></a>字在寄存器中的存储</h2><p> 出于对兼容器的考虑，8086CPU可以一次性处理一下两种尺寸的数据:</p>
+<ul>
+<li><p>字节：记为byte，一个字节由8个bit组成，可以存在8位寄存器中。</p>
+</li>
+<li><p>字：记为word，一个字由两个字节组成，这两个字节分别称为这个字的高位字节和低位字节，如下图所示：</p>
+<p><em>字：0 1 0 0 1 1 1 0 0 0 1 0 0 0 0 0</em></p>
+<p>​           <em>高位字节         低位字节</em></p>
+<h5 id="关于数制的讨论"><a href="#关于数制的讨论" class="headerlink" title="关于数制的讨论"></a>关于数制的讨论</h5><p>​    十六进制的一位相当于二进制的四位，如0100111000100000可表示成：4(0100)、E(1110)、2(0010)、0(0000)四位十六进制数。</p>
+<p>​     用十六进制来表示数据可以直观地看出组成数据的各个字节数据的值是由哪些8位数据构成的。比如20000写成4E20就可以直观看出这个数据是由4E和20两个8位数据构成的，如果AX中存放4E20，则AH里是4E，AL里是20。</p>
+<p>​     为区分不同的进制，在十六进制表示的数据后加H，在二进制表示的数据后面加B，十进制表示的数据后面什么也不加。如：十进制：20000，十六进制：4E20H，二进制：0100111000100000B。</p>
+</li>
+</ul>
+</li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://kento85.github.io/2021/10/13/%E2%80%9C%E5%A6%82%E4%BD%95%E5%8F%91%E5%B8%83%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E2%80%9D/" data-id="ckvqssw470003acuy4jb13hfe" data-title="“如何发布一篇博客”" class="article-share-link">Share</a>
+      <a data-url="https://kento85.github.io/2021/11/08/%E5%AF%84%E5%AD%98%E5%99%A8/" data-id="ckvqsxm6x0000okuybqsqaecj" data-title="寄存器" class="article-share-link">Share</a>
       
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a></li></ul>
-
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2021/10/21/Java-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Java 语言基础
-        
-      </div>
-    </a>
   
-  
-    <a href="/2021/09/18/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2021/10/31/%E6%9C%89%E5%85%B3%E6%B1%87%E7%BC%96/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
+      <div class="article-nav-title">有关汇编</div>
     </a>
   
 </nav>

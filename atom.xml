@@ -6,7 +6,7 @@
   <link href="https://kento85.github.io/atom.xml" rel="self"/>
   
   <link href="https://kento85.github.io/"/>
-  <updated>2021-10-31T11:10:37.720Z</updated>
+  <updated>2021-11-08T15:10:19.964Z</updated>
   <id>https://kento85.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>寄存器</title>
+    <link href="https://kento85.github.io/2021/11/08/%E5%AF%84%E5%AD%98%E5%99%A8/"/>
+    <id>https://kento85.github.io/2021/11/08/%E5%AF%84%E5%AD%98%E5%99%A8/</id>
+    <published>2021-11-08T14:11:23.000Z</published>
+    <updated>2021-11-08T15:10:19.964Z</updated>
+    
+    <content type="html"><![CDATA[<p>前言：内部总线实现CPU内部各器件之间的联系，外部总线实现CPU和主板上其他器件的联系。简单地说，在CPU中：</p><ul><li><p>运算器进行信息处理</p></li><li><p>寄存器进行信息存储</p></li><li><p>控制器控制各种器件进行工作</p></li><li><p>内部总线连接各种器件，在它们之间进行数据的传送</p><h2 id="通用寄存器"><a href="#通用寄存器" class="headerlink" title="通用寄存器"></a>通用寄存器</h2><p>（不同的CPU，寄存器的个数、结构是不同的，8086CPU有14个寄存器，每个寄存器都有一个名称，这些寄存器是：AX、BX、CX、DX、SI、DI、SP、BP、IP、CS、SS、DS、ES、PSW。）</p><p>  <strong>AX、BX、CX、DX这四个寄存器通常用来存放一般性的数据，被称为通用寄存器，这四个寄存器都可分为两个可独立使用的8位寄存器来用：</strong></p><p><strong>AX可分为AH和AL;</strong></p><p><strong>BX可分为BH和BL</strong>;</p><p><strong>CX可分为CH和CL;</strong></p><p><strong>DX可分为DH和DL;</strong></p><p>AX的低8位(0位<del>7位)构成了AL寄存器，高8位(8位</del>15位)构成了AH寄存器。AH和AL寄存器是可以独立使用的8位寄存器。</p><h2 id="字在寄存器中的存储"><a href="#字在寄存器中的存储" class="headerlink" title="字在寄存器中的存储"></a>字在寄存器中的存储</h2><p> 出于对兼容器的考虑，8086CPU可以一次性处理一下两种尺寸的数据:</p><ul><li><p>字节：记为byte，一个字节由8个bit组成，可以存在8位寄存器中。</p></li><li><p>字：记为word，一个字由两个字节组成，这两个字节分别称为这个字的高位字节和低位字节，如下图所示：</p><p><em>字：0 1 0 0 1 1 1 0 0 0 1 0 0 0 0 0</em></p><p>​           <em>高位字节         低位字节</em></p><h5 id="关于数制的讨论"><a href="#关于数制的讨论" class="headerlink" title="关于数制的讨论"></a>关于数制的讨论</h5><p>​    十六进制的一位相当于二进制的四位，如0100111000100000可表示成：4(0100)、E(1110)、2(0010)、0(0000)四位十六进制数。</p><p>​     用十六进制来表示数据可以直观地看出组成数据的各个字节数据的值是由哪些8位数据构成的。比如20000写成4E20就可以直观看出这个数据是由4E和20两个8位数据构成的，如果AX中存放4E20，则AH里是4E，AL里是20。</p><p>​     为区分不同的进制，在十六进制表示的数据后加H，在二进制表示的数据后面加B，十进制表示的数据后面什么也不加。如：十进制：20000，十六进制：4E20H，二进制：0100111000100000B。</p></li></ul></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;前言：内部总线实现CPU内部各器件之间的联系，外部总线实现CPU和主板上其他器件的联系。简单地说，在CPU中：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;运算器进行信息处理&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;寄存器进行信息存储&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;控制器控制各种器件进行</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>有关汇编</title>
