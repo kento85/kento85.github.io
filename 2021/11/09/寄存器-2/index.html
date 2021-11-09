@@ -4,17 +4,17 @@
   <meta charset="utf-8">
   
   
-  <title>寄存器 | Hexo</title>
+  <title>寄存器-2 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="前言：内部总线实现CPU内部各器件之间的联系，外部总线实现CPU和主板上其他器件的联系。简单地说，在CPU中：  运算器进行信息处理  寄存器进行信息存储  控制器控制各种器件进行工作  内部总线连接各种器件，在它们之间进行数据的传送 通用寄存器（不同的CPU，寄存器的个数、结构是不同的，8086CPU有14个寄存器，每个寄存器都有一个名称，这些寄存器是：AX、BX、CX、DX、SI、DI、SP、">
+  <meta name="description" content="16位结构的CPU什么是16位结构的CPU呢? ​       概括地说，16位结构(16位机、字长为16等常见说法)，描述了一个CPU具有下面几方面的结构特性：  运算器一次最多可以处理16位的数据； 寄存器的最大宽度为16位； 寄存器和运算器之间的通路为16位。  8086CPU给出物理地址的方法​      8086CPU有20位地址总线，可以传送20位地址，达到1MB寻址能力。8086CP">
 <meta property="og:type" content="article">
-<meta property="og:title" content="寄存器">
-<meta property="og:url" content="https://kento85.github.io/2021/11/08/%E5%AF%84%E5%AD%98%E5%99%A8/index.html">
+<meta property="og:title" content="寄存器-2">
+<meta property="og:url" content="https://kento85.github.io/2021/11/09/%E5%AF%84%E5%AD%98%E5%99%A8-2/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="前言：内部总线实现CPU内部各器件之间的联系，外部总线实现CPU和主板上其他器件的联系。简单地说，在CPU中：  运算器进行信息处理  寄存器进行信息存储  控制器控制各种器件进行工作  内部总线连接各种器件，在它们之间进行数据的传送 通用寄存器（不同的CPU，寄存器的个数、结构是不同的，8086CPU有14个寄存器，每个寄存器都有一个名称，这些寄存器是：AX、BX、CX、DX、SI、DI、SP、">
+<meta property="og:description" content="16位结构的CPU什么是16位结构的CPU呢? ​       概括地说，16位结构(16位机、字长为16等常见说法)，描述了一个CPU具有下面几方面的结构特性：  运算器一次最多可以处理16位的数据； 寄存器的最大宽度为16位； 寄存器和运算器之间的通路为16位。  8086CPU给出物理地址的方法​      8086CPU有20位地址总线，可以传送20位地址，达到1MB寻址能力。8086CP">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-11-08T14:11:23.000Z">
-<meta property="article:modified_time" content="2021-11-08T15:10:19.964Z">
+<meta property="article:published_time" content="2021-11-09T13:45:11.000Z">
+<meta property="article:modified_time" content="2021-11-09T14:44:05.950Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -73,10 +73,10 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-寄存器" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-寄存器-2" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2021/11/08/%E5%AF%84%E5%AD%98%E5%99%A8/" class="article-date">
-  <time class="dt-published" datetime="2021-11-08T14:11:23.000Z" itemprop="datePublished">2021-11-08</time>
+    <a href="/2021/11/09/%E5%AF%84%E5%AD%98%E5%99%A8-2/" class="article-date">
+  <time class="dt-published" datetime="2021-11-09T13:45:11.000Z" itemprop="datePublished">2021-11-09</time>
 </a>
     
   </div>
@@ -87,7 +87,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      寄存器
+      寄存器-2
     </h1>
   
 
@@ -95,41 +95,43 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>前言：内部总线实现CPU内部各器件之间的联系，外部总线实现CPU和主板上其他器件的联系。简单地说，在CPU中：</p>
+        <h2 id="16位结构的CPU"><a href="#16位结构的CPU" class="headerlink" title="16位结构的CPU"></a>16位结构的CPU</h2><p>什么是16位结构的CPU呢?</p>
+<p>​       概括地说，16位结构(16位机、字长为16等常见说法)，描述了一个CPU具有下面几方面的结构特性：</p>
 <ul>
-<li><p>运算器进行信息处理</p>
-</li>
-<li><p>寄存器进行信息存储</p>
-</li>
-<li><p>控制器控制各种器件进行工作</p>
-</li>
-<li><p>内部总线连接各种器件，在它们之间进行数据的传送</p>
-<h2 id="通用寄存器"><a href="#通用寄存器" class="headerlink" title="通用寄存器"></a>通用寄存器</h2><p>（不同的CPU，寄存器的个数、结构是不同的，8086CPU有14个寄存器，每个寄存器都有一个名称，这些寄存器是：AX、BX、CX、DX、SI、DI、SP、BP、IP、CS、SS、DS、ES、PSW。）</p>
-<p>  <strong>AX、BX、CX、DX这四个寄存器通常用来存放一般性的数据，被称为通用寄存器，这四个寄存器都可分为两个可独立使用的8位寄存器来用：</strong></p>
-<p><strong>AX可分为AH和AL;</strong></p>
-<p><strong>BX可分为BH和BL</strong>;</p>
-<p><strong>CX可分为CH和CL;</strong></p>
-<p><strong>DX可分为DH和DL;</strong></p>
-<p>AX的低8位(0位<del>7位)构成了AL寄存器，高8位(8位</del>15位)构成了AH寄存器。AH和AL寄存器是可以独立使用的8位寄存器。</p>
-<h2 id="字在寄存器中的存储"><a href="#字在寄存器中的存储" class="headerlink" title="字在寄存器中的存储"></a>字在寄存器中的存储</h2><p> 出于对兼容器的考虑，8086CPU可以一次性处理一下两种尺寸的数据:</p>
+<li>运算器一次最多可以处理16位的数据；</li>
+<li>寄存器的最大宽度为16位；</li>
+<li>寄存器和运算器之间的通路为16位。</li>
+</ul>
+<h2 id="8086CPU给出物理地址的方法"><a href="#8086CPU给出物理地址的方法" class="headerlink" title="8086CPU给出物理地址的方法"></a>8086CPU给出物理地址的方法</h2><p>​      8086CPU有20位地址总线，可以传送20位地址，达到1MB寻址能力。8086CPU采用在内部用两个16位地址合成的方法来形成一个20位的物理地址。</p>
+<p>​       当8086CPU要读写内存时:</p>
 <ul>
-<li><p>字节：记为byte，一个字节由8个bit组成，可以存在8位寄存器中。</p>
+<li><p>CPU中的相关部件提供两个16位的地址，一个称为<strong>段地址</strong>，另一个称为<strong>偏移地址；</strong></p>
 </li>
-<li><p>字：记为word，一个字由两个字节组成，这两个字节分别称为这个字的高位字节和低位字节，如下图所示：</p>
-<p><em>字：0 1 0 0 1 1 1 0 0 0 1 0 0 0 0 0</em></p>
-<p>​           <em>高位字节         低位字节</em></p>
-<h5 id="关于数制的讨论"><a href="#关于数制的讨论" class="headerlink" title="关于数制的讨论"></a>关于数制的讨论</h5><p>​    十六进制的一位相当于二进制的四位，如0100111000100000可表示成：4(0100)、E(1110)、2(0010)、0(0000)四位十六进制数。</p>
-<p>​     用十六进制来表示数据可以直观地看出组成数据的各个字节数据的值是由哪些8位数据构成的。比如20000写成4E20就可以直观看出这个数据是由4E和20两个8位数据构成的，如果AX中存放4E20，则AH里是4E，AL里是20。</p>
-<p>​     为区分不同的进制，在十六进制表示的数据后加H，在二进制表示的数据后面加B，十进制表示的数据后面什么也不加。如：十进制：20000，十六进制：4E20H，二进制：0100111000100000B。</p>
+<li><p>段地址和偏移地址通过内部总线称为<strong>地址加法器</strong>的部件；</p>
+</li>
+<li><p>地址加法器将两个16位地址合成一个20位的物理地址；</p>
+</li>
+<li><p>地址加法器通过内部总线将20位物理地址送入<strong>输入输出控制电路</strong>；</p>
+</li>
+<li><p>输入输出控制电路将20位物理地址送上<strong>地址总线</strong>；</p>
+</li>
+<li><p>20位物理地址被地址总线传送到<strong>存储器</strong>；</p>
+<p> <strong>地址加法器采用物理地址=段地址x16+偏移地址的方法合成物理地址</strong></p>
 </li>
 </ul>
-</li>
-</ul>
+<p><em>“段地址x16”有一个更为常用的说法是左移4位，并且一个数据的二进制形式左移N位，就相当于该数据乘以2的N次方。</em></p>
+<p>  进一步思考，可看出：**一个数据的十六进制形式左移1位，相当于乘以16;一个数据的十进制左移1位，相当于乘以10；一个X进制的数据左移1位，相当于乘以X。</p>
+<h2 id="“段地址x16-偏移地址-物理地址”的本质含义"><a href="#“段地址x16-偏移地址-物理地址”的本质含义" class="headerlink" title="“段地址x16+偏移地址=物理地址”的本质含义"></a>“段地址x16+偏移地址=物理地址”的本质含义</h2><p>​    本质含义：<strong>CPU在访问内存时，用一个基础地址即段地址x16和一个相对于基础地址的偏移地址相加，给出内存单元的物理地址。</strong></p>
+<p>​     举例比喻说明：</p>
+<p>你要去图书馆，问我那里的地址，我可以用两种方式告诉你图书馆的地址：</p>
+<p>1.从学校走2826m图书馆。这2826m可以认为是图书馆的物理地址。</p>
+<p>2.从学校走2000m到体育馆，从体育馆再走826m到图书馆。第一个距离2000m，是相对于起点的基础地址，第二个距离826m是相对于基础地址的偏移地址(以基础地址为起点的地址)。</p>
+<!--采用比喻生动说明更有助于理解抽象概念-->
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://kento85.github.io/2021/11/08/%E5%AF%84%E5%AD%98%E5%99%A8/" data-id="ckvqsxm6x0000okuybqsqaecj" data-title="寄存器" class="article-share-link">Share</a>
+      <a data-url="https://kento85.github.io/2021/11/09/%E5%AF%84%E5%AD%98%E5%99%A8-2/" data-id="ckvs7fcyu0000ksuy2f933cqy" data-title="寄存器-2" class="article-share-link">Share</a>
       
       
       
@@ -139,19 +141,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2021/11/09/%E5%AF%84%E5%AD%98%E5%99%A8-2/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          寄存器-2
-        
-      </div>
-    </a>
   
-  
-    <a href="/2021/10/31/%E6%9C%89%E5%85%B3%E6%B1%87%E7%BC%96/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2021/11/08/%E5%AF%84%E5%AD%98%E5%99%A8/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">有关汇编</div>
+      <div class="article-nav-title">寄存器</div>
     </a>
   
 </nav>
